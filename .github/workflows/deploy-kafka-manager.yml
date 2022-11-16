@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy til dev-fss
     steps:
+      - uses: actions/checkout@v3
       - uses: nais/deploy/actions/deploy@v1
         env:
           RESOURCE: .nais/org-kafka-manager-dev.yml
