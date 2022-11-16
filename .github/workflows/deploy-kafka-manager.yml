@@ -14,5 +14,5 @@ jobs:
     steps:
       - uses: nais/deploy/actions/deploy@v1
         env:
-          RESOURCE: .nais/deploy-kafka-manager.yml
+          RESOURCE: .nais/org-kafka-manager-dev.yml
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
