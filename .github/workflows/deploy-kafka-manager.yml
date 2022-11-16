@@ -17,3 +17,4 @@ jobs:
         env:
           RESOURCE: .nais/org-kafka-manager-dev.yml
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-fss
