@@ -12,14 +12,14 @@ on:
 jobs:
   deploy-dev:
     runs-on: ubuntu-latest
-    name: Deploy til dev-fss
+    name: Deploy til dev-gcp
     steps:
       - uses: actions/checkout@v3
       - uses: nais/deploy/actions/deploy@v1
         env:
           RESOURCE: .nais/org-kafka-manager-dev.yml
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: dev-fss
+          CLUSTER: dev-gcp
 
   deploy-prod:
     runs-on: ubuntu-latest
