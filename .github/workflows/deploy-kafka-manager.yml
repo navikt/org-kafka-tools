@@ -23,11 +23,11 @@ jobs:
 
   deploy-prod:
     runs-on: ubuntu-latest
-    name: Deploy til prod-fss
+    name: Deploy til prod-gcp
     steps:
       - uses: actions/checkout@v3
       - uses: nais/deploy/actions/deploy@v1
         env:
           RESOURCE: .nais/org-kafka-manager-prod.yml
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: prod-fss
+          CLUSTER: prod-gcp

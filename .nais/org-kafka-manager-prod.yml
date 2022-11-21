@@ -10,7 +10,7 @@ spec:
   port: 8080
   webproxy: true
   ingresses:
-    - https://orgkafka-manager.intern.nav.no
+    - https://org-kafka-manager.intern.nav.no
   prometheus:
     enabled: true
     path: /internal/prometheus
