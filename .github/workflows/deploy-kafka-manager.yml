@@ -6,6 +6,7 @@ on:
       - 'main'
     paths:
       - '.nais/org-kafka-manager-dev.yml'
+      - '.nais/org-kafka-manager-prod.yml'
       - '.github/workflows/deploy-kafka-manager.yml'
 
 jobs:
