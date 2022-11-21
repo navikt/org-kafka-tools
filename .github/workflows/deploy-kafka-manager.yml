@@ -9,7 +9,7 @@ on:
       - '.github/workflows/deploy-kafka-manager.yml'
 
 jobs:
-  deploy:
+  deploy-dev:
     runs-on: ubuntu-latest
     name: Deploy til dev-fss
     steps:
@@ -19,3 +19,14 @@ jobs:
           RESOURCE: .nais/org-kafka-manager-dev.yml
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-fss
+
+  deploy-prod:
+    runs-on: ubuntu-latest
+    name: Deploy til prod-fss
+    steps:
+      - uses: actions/checkout@v3
+      - uses: nais/deploy/actions/deploy@v1
+        env:
+          RESOURCE: .nais/org-kafka-manager-prod.yml
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: prod-fss
