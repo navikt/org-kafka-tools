@@ -98,6 +98,6 @@ spec:
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
-              }            
+              }
             ]
           }
