@@ -43,25 +43,61 @@ spec:
   env:
     - name: APP_CONFIG_JSON # Required
       value: >
-          {
-            "topics": [
-              {
-                "name": "org.nav-ident",
-                "location": "AIVEN",
-                "keyDeserializerType": "STRING",
-                "valueDeserializerType": "STRING"
-              },
-              {
-                "name": "org.ressurs-state-v1",
-                "location": "AIVEN",
-                "keyDeserializerType": "STRING",
-                "valueDeserializerType": "STRING"
-              },
-              {
-                "name": "org.ressurs-eventsource",
-                "location": "AIVEN",
-                "keyDeserializerType": "STRING",
-                "valueDeserializerType": "STRING"
-              }
-            ]
-          }
+        {
+          "topics": [
+            {
+              "name": "org.nav-ident",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            },
+            {
+              "name": "org.ressurs-state-v1",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            },
+            {
+              "name": "org.ressurs-eventsource",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            },
+            {
+              "name": "org.orgenhet-eventsource",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            },
+            {
+              "name": "org.orgenhet-state-v1",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            },
+            {
+              "name": "org.nom.orgenhet-eventsource",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            },
+            {
+              "name": "org.nom.orgenhet-state-v1",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            },
+            {
+              "name": "org.nom.ressurs-state-v1",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            },
+            {
+              "name": "org.nom.ressurs-eventsource",
+              "location": "AIVEN",
+              "keyDeserializerType": "STRING",
+              "valueDeserializerType": "STRING"
+            }            
+          ]
+        }
