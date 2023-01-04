@@ -1,0 +1,3 @@
+#!/bin/sh
+
+kafka-delete-records.sh --bootstrap-server "$KAFKA_BROKERS" --command-config "$AIVEN_CONF" "$@"
