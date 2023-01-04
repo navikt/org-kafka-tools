@@ -12,7 +12,7 @@ on:
           - dev
           - prod
       aiven-secret:
-        description: Aiven secret to mount, e.g aiven-vedtak-6rxv2sxp
+        description: Aiven secret to mount, e.g aiven-kafka-cli-2324grus
         required: true
 
 env:
