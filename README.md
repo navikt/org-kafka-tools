@@ -2,6 +2,9 @@
 
 ### Reset streams application
 Reset topologi (kafka strømmen), application-id er laget av nais og finnes som env-var i poden
+
+kafka.cli pod må deployes med aiven secret som har rettigheter på partisjonen. Det vil si aiven secret til streams appen. F.eks. aiven-nom-orgenhet-eventsrc-to-state-senon7u8
+
 ```shell
 kubectl exec -i deploy/kafka-cli -- kafka-streams-application-reset --application-id nom-orgenhet-eventsrc-to-state --input-topics nom.orgenhet-eventsource
 ```
@@ -23,6 +26,8 @@ kubectl exec -i deploy/kafka-cli -- kafka-topics --describe --topic org.nom.ress
 ```
 
 ### Delete records i kafka topic
+:bangbang: Dette fungerer ikke. kafka-cli har ikke rettighetene til å gjøre dette
+
 NB! Flere steg.
 1. Lag json fil for sletting. <br>
  Sett riktig topic, og offset å slette frem til.
@@ -33,6 +38,9 @@ NB! Flere steg.
 
 Se også *Option 2* i https://www.oak-tree.tech/blog/kafka-admin-remove-messages
 og https://stackoverflow.com/questions/46209666/how-do-i-delete-clean-kafka-queued-messages-without-deleting-topic
+
+kafka.cli pod må deployes med aiven secret som har rettigheter på partisjonen.
+F.eks. gi org-kafka-manger readwrite på topic, og bruk denne appens k8s aiven secret (f.eks. aiven-org-kafka-manager-cg37ax1v) 
 
 ```shell
 echo '{"partitions": [{"topic": "mytest", "partition": 0, "offset": -1}], "version":1 }' > topic.json  

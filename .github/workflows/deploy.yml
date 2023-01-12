@@ -12,7 +12,7 @@ on:
           - dev
           - prod
       aiven-secret:
-        description: Aiven secret to mount, e.g aiven-kafka-cli-2324grus
+        description: Aiven secret med korrekte rettigheter to mount, f.eks. aiven-org-kafka-manager-cg37ax1v
         required: true
 
 env:
