@@ -40,6 +40,7 @@ spec:
           - id: efa3b907-b01c-4293-94a2-c0890b123783 # Required for authorization
   kafka: # Optional. Required for Aiven
     pool: nav-dev
+
   env:
     - name: APP_CONFIG_JSON # Required
       value: >
