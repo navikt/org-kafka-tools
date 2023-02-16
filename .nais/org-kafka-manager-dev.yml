@@ -53,6 +53,12 @@ spec:
                 "valueDeserializerType": "STRING"
               },
               {
+                "name": "org.nav-ident-rnr",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },
+              {
                 "name": "org.nom.orgenhet-eventsource",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
