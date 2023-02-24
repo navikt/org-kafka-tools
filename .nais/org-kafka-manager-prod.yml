@@ -92,6 +92,12 @@ spec:
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom-ressurser",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
               }
             ]
           }
