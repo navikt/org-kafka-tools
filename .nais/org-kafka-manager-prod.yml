@@ -76,6 +76,30 @@ spec:
                 "valueDeserializerType": "STRING"
               },
               {
+                "name": "org.nom.intern-orgenhet-state",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom.intern-ressurs-state",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom.api-orgenhet-state-v2",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom.api-ressurs-state-v2",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },         
+              {
                 "name": "org.nom.ressurs-eventsource",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
