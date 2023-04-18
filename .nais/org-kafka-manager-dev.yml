@@ -125,13 +125,13 @@ spec:
                 "valueDeserializerType": "STRING"
               },
               {
-                "name": "nom.orgtilknytning-eventsource",
+                "name": "org.nom.orgtilknytning-eventsource",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
               },
               {
-                "name": "org.intern-orgtilknytning-state",
+                "name": "org.nom.intern-orgtilknytning-state",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
