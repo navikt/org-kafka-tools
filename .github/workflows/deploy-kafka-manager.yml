@@ -11,6 +11,8 @@ on:
 
 jobs:
   deploy-dev:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     name: Deploy til dev-gcp
     steps:
@@ -22,6 +24,8 @@ jobs:
           CLUSTER: dev-gcp
 
   deploy-prod:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     name: Deploy til prod-gcp
     steps:
