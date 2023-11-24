@@ -137,7 +137,7 @@ spec:
                 "valueDeserializerType": "STRING"
               },
               {
-                "name": "nom.intern-organisering-state",
+                "name": "org.nom.intern-organisering-state",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
