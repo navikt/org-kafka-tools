@@ -89,7 +89,7 @@ spec:
                 "valueDeserializerType": "STRING"
               },
               {
-              "name": "nom.api-hendelser-v1",
+              "name": "org.nom.api-hendelser-v1",
               "location": "AIVEN",
               "keyDeserializerType": "STRING",
               "valueDeserializerType": "STRING"
