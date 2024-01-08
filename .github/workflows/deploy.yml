@@ -24,6 +24,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Deploy til ${{ github.event.inputs.environment }}-gcp
+    permissions:
+      contents: "read"
+      id-token: "write"
     steps:
       - uses: styfle/cancel-workflow-action@0.11.0
       - uses: actions/checkout@v3
@@ -38,10 +41,9 @@ jobs:
           push: true
           tags: ${{env.IMAGE}},ghcr.io/navikt/${{ github.repository }}:latest
 
-      - uses: nais/deploy/actions/deploy@v1
+      - uses: nais/deploy/actions/deploy@v2
         env:
           RESOURCE: .nais/nais.yml
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           PRINT_PAYLOAD: true
           CLUSTER: ${{ github.event.inputs.environment }}-gcp
           VAR: pool=${{ env.POOL }},secret=${{ env.SECRET }}
