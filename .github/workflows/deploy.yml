@@ -16,11 +16,30 @@ on:
         required: true
 
 env:
-  IMAGE: ghcr.io/${{ github.repository }}:${{ github.sha }}
   POOL: nav-${{ github.event.inputs.environment }}
   SECRET: ${{ github.event.inputs.aiven-secret }}
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      id-token: "write"
+    steps:
+      - uses: styfle/cancel-workflow-action@0.11.0
+      - uses: actions/checkout@v3
+
+      - name: Build and push Docker image
+        uses: nais/docker-build-push@v0
+        id: docker-push
+        with:
+          team: org
+          image_suffix: kafka-cli
+          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }}
+          identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }}
+    outputs:
+      image: ${{ steps.docker-push.outputs.image }}
+
   deploy:
     runs-on: ubuntu-latest
     name: Deploy til ${{ github.event.inputs.environment }}-gcp
@@ -28,22 +47,9 @@ jobs:
       contents: "read"
       id-token: "write"
     steps:
-      - uses: styfle/cancel-workflow-action@0.11.0
-      - uses: actions/checkout@v3
-      - uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: docker/build-push-action@v4
-        with:
-          push: true
-          tags: ${{env.IMAGE}},ghcr.io/navikt/${{ github.repository }}:latest
-
       - uses: nais/deploy/actions/deploy@v2
         env:
           RESOURCE: .nais/nais.yml
           PRINT_PAYLOAD: true
           CLUSTER: ${{ github.event.inputs.environment }}-gcp
-          VAR: pool=${{ env.POOL }},secret=${{ env.SECRET }}
+          VAR: image=${{needs.build.outputs.image}},pool=${{ env.POOL }},secret=${{ env.SECRET }}
