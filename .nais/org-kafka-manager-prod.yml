@@ -6,7 +6,7 @@ metadata:
   labels:
     team: org
 spec:
-  image: ghcr.io/navikt/kafka-manager/kafka-manager:2.2023.08.01_08.06-26db51b7b8b7 # See https://github.com/navikt/kafka-manager/packages
+  image: europe-north1-docker.pkg.dev/nais-management-233d/poao/kafka-manager:2023.12.13-06.32-bd9f953 # See https://console.cloud.google.com/artifacts/docker/nais-management-233d/europe-north1/poao/kafka-manager
   port: 8080
   webproxy: true
   ingresses:
