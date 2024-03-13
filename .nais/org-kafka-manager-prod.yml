@@ -46,6 +46,12 @@ spec:
           {
             "topics": [
               {
+                "name": "org.sobhist-v5",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },
+              {
                 "name": "org.nav-ident",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
