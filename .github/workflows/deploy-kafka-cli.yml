@@ -20,7 +20,7 @@ env:
   SECRET: ${{ github.event.inputs.aiven-secret }}
 
 jobs:
-  build:
+  build-docker-image:
     runs-on: ubuntu-latest
     permissions:
       contents: "read"
@@ -42,6 +42,7 @@ jobs:
       image: ${{ steps.docker-push.outputs.image }}
 
   deploy:
+    needs: build-docker-image
     runs-on: ubuntu-latest
     name: Deploy til ${{ github.event.inputs.environment }}-gcp
     permissions:
