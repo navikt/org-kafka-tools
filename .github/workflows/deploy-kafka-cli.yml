@@ -58,4 +58,4 @@ jobs:
           RESOURCE: .nais/nais.yml
           PRINT_PAYLOAD: true
           CLUSTER: ${{ github.event.inputs.environment }}-gcp
-          VAR: image=${{needs.build.outputs.image}},pool=${{ env.POOL }},secret=${{ env.SECRET }}
+          VAR: image=${{needs.build-docker-image.outputs.image}},pool=${{ env.POOL }},secret=${{ env.SECRET }}
