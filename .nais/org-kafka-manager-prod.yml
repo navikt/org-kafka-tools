@@ -158,6 +158,18 @@ spec:
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
-              }
+              },
+              {
+                "name": "org.nom.intern-dvh-last-result",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom.intern-gml-dvh-last-result",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              }  
             ]
           }
