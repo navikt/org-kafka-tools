@@ -27,7 +27,6 @@ jobs:
       id-token: "write"
       actions: "write"
     steps:
-      - uses: styfle/cancel-workflow-action@0.11.0
       - uses: actions/checkout@v3
 
       - name: Build and push Docker image
@@ -49,8 +48,7 @@ jobs:
       contents: "read"
       id-token: "write"
     steps:
-      - uses: styfle/cancel-workflow-action@0.11.0
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Deploy til nais
         uses: nais/deploy/actions/deploy@v2
