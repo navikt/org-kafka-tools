@@ -176,6 +176,18 @@ spec:
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom.intern-orgtilknytning-state-dlt",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom.intern-ressurs-state-dlt",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
               }
             ]
           }
