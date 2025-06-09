@@ -2,7 +2,7 @@ FROM eclipse-temurin:21-alpine
 
 RUN apk update && apk upgrade && apk add bash curl jq vim
 
-ENV KAFKA_URL=https://dlcdn.apache.org/kafka/3.6.2/kafka_2.13-3.6.2.tgz
+ENV KAFKA_URL=https://dlcdn.apache.org/kafka/3.9.1/kafka-3.9.1-src.tgz
 ENV KAFKA_DOWNLOAD=/download/kafka.tgz
 ENV KAFKA_WORKDIR=/cli/kafka
 ENV PATH=${KAFKA_WORKDIR}/bin:${PATH}:/scripts
