@@ -209,7 +209,7 @@ spec:
                 "valueDeserializerType": "STRING"
               },
               {
-                "name": "nom.orgenhet-leder-eventsource",
+                "name": "org.nom.orgenhet-leder-eventsource",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
