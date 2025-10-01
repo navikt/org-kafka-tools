@@ -194,6 +194,18 @@ spec:
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom.intern-orgenhet-leder-state",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
+              },
+              {
+                "name": "org.nom.orgenhet-leder-eventsource",
+                "location": "AIVEN",
+                "keyDeserializerType": "STRING",
+                "valueDeserializerType": "STRING"
               }
             ]
           }
