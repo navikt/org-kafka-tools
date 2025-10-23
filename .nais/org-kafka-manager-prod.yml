@@ -206,12 +206,6 @@ spec:
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
                 "valueDeserializerType": "STRING"
-              },
-              {
-              "name": "__consumer_offsets",
-              "location": "AIVEN",
-              "keyDeserializerType": "STRING",
-              "valueDeserializerType": "STRING"
               }    
             ]
           }
