@@ -83,18 +83,6 @@ spec:
                 "valueDeserializerType": "STRING"
               },
               {
-                "name": "org.nom.api-ressurs-state-v2",
-                "location": "AIVEN",
-                "keyDeserializerType": "STRING",
-                "valueDeserializerType": "STRING"
-              },
-              {
-                "name": "org.nom.api-ressurs-state-v3",
-                "location": "AIVEN",
-                "keyDeserializerType": "STRING",
-                "valueDeserializerType": "STRING"
-              },
-              {
                 "name": "org.nom.api-ressurs-state-v4",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
