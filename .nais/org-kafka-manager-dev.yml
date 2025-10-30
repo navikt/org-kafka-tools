@@ -161,12 +161,6 @@ spec:
                 "valueDeserializerType": "STRING"
               },
               {
-                "name": "org.nom.research-api-ressurs-state-v2",
-                "location": "AIVEN",
-                "keyDeserializerType": "STRING",
-                "valueDeserializerType": "STRING"
-              },
-              {
                 "name": "org.nom.intern-dvh-last-result",
                 "location": "AIVEN",
                 "keyDeserializerType": "STRING",
