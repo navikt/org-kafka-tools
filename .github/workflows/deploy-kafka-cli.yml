@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # ratchet:actions/checkout@v4
 
       - name: Deploy til nais
-        uses: nais/deploy/actions/deploy@fa754451577294aae42872a69b888b3470478ec1 # ratchet:nais/deploy/actions/deploy@v2
+        uses: nais/deploy/actions/deploy@e90640a98702d2554350fb35c4d5d242dd8e4346 # ratchet:nais/deploy/actions/deploy@v2
         env:
           RESOURCE: .nais/nais.yml
           PRINT_PAYLOAD: true
